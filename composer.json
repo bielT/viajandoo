@@ -1,0 +1,21 @@
+{
+  "name": "biel/viajando",
+
+  "description":"Site",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors":[{
+      "name": "Gabriel Teles",
+      "email": "biel.teles11@gmail.com"
+  }],
+  "autoload":{
+      "psr-4": {
+          "src\\" :  "src/"
+      }
+  },
+  "require" :{
+    "php" : ">=7.4",
+    "twbs/bootstrap": "4.1.3",
+    "components/jquery": "3.6.0"
+  }
+}

@@ -1,0 +1,28 @@
+h11 {
+    color:red;
+}
+
+
+.row{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 2px;
+
+}
+
+.btn_round {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.btn_round:hover {
+  color: #fff;
+  background: #6b4acc;
+  border: 1px solid #6b4acc;
+}
