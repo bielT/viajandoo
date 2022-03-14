@@ -12,7 +12,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" id="login-menu" href="cadrastro.php"><img id="login"
+                    <a class="nav-item nav-link" id="login-menu" href="registerUser.php"><img id="login"
                             src="imagens/login.png" alt="login"></a>
                 </div>
             </div>

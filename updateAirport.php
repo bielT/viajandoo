@@ -1,6 +1,6 @@
 <?php
 
-$title='Atualizar Aerporto';
+$title='Atualizar Aeroporto';
 $links='
 <link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">

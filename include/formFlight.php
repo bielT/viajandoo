@@ -33,14 +33,14 @@
           <div class="form-group row" style="padding: 30px 0px 0px 0px;">
 
             <div class="col-6">
-              <label class="input-group-addon">Areoporto de Saída <h11>*</h11></label>
+              <label class="input-group-addon">Aeroporto de Saída <h11>*</h11></label>
               <select class="form-control"  id="areoportoS"required >
                 <option>Select padrão</option>
               </select>
             </div>
 
             <div class="col-6">
-              <label class="input-group-addon">Areoporto de Destino <h11>*</h11></label>
+              <label class="input-group-addon">Aeroporto de Destino <h11>*</h11></label>
               <select class="form-control" id="areoportoD"required >
                 <option></option>
               </select>
@@ -62,7 +62,7 @@
             <div class="col-3">
               <div class="form-group ">
 
-                <label class="input-group-addon">Horario <h11>*</h11></label>
+                <label class="input-group-addon">Horário <h11>*</h11></label>
                 <div class="input-group">
                   <input id="hourin" name="hourin" class="form-control" type="time"  required >
                 </div>
@@ -81,7 +81,7 @@
             <div class="col-3">
               <div class="form-group ">
 
-                <label class="input-group-addon">Horario <h11>*</h11></label>
+                <label class="input-group-addon">Horário <h11>*</h11></label>
                 <div class="input-group">
                   <input id="hourout" name="hourout" class="form-control" type="time"  required >
                 </div>
