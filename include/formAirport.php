@@ -20,6 +20,8 @@
         <hr class="my-4">
 
 
+
+
         <div class="dados-pessoas">
           <!-- Text input-->
 
@@ -71,7 +73,7 @@
 
         </div>
 
-        
+
         <hr class="my-4">
         <div class="arquivo row" style="padding: 0px;">
 

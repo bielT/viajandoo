@@ -39,6 +39,12 @@
                                                     </tr>';
 
 ?>
+
+    <div class="container">
+      <div class="jumbotron bg-danger">
+        <h1>WDEV Vagas</h1>
+        <p>Exemplo de CRUD com PHP orientados a objetos</p>
+      </div>
 <main>
 
   <?=$mensagem?>
@@ -71,3 +77,4 @@
 
 
 </main>
+ </div>
