@@ -9,7 +9,7 @@ $links='
 include __DIR__.'/include/head.php';
 
 
-// include __DIR__.'/include/toolbarCadrastro.php';
+include __DIR__.'/include/toolbarAdm.php';
 include __DIR__.'/include/home.php';
 
 

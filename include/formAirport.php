@@ -70,10 +70,87 @@
 
           </div>
 
+          
+
 
         </div>
+        <div class="form-group row" style="padding: 30px 0px 0px 0px;">
+
+<div class="col-4">
+  <div class="form-group ">
+
+    <label class="input-group-addon">Resumo <h11>*</h11></label>
+    <div class="input-group">
+    <textarea class="form-control" rows="3" placeholder="Seu Resumo" name="resumo"></textarea>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-4">
+  <div class="form-group">
+    <label class="input-group-addon">Descrição <h11>*</h11></label>
+    <div class="input-group">
+    <textarea class="form-control" rows="3" placeholder="Sua Descrição" name="descricao"></textarea>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="col-4">
+  <div class="form-group">
+    <label class="input-group-addon">Preço <h11>*</h11></label>
+    <div class="input-group">
+      <input id="preco" name="preco" class="form-control"
+      type="text" required   >
+    </div>
+
+  </div>
+</div>
+
+</div>
 
 
+
+
+</div>
+<hr class="my-4">
+        <div class="arquivo row" style="padding: 0px;">
+
+          <div class="col-6"  style="padding: 0px;">
+            <div class="form-group row" style="padding: 30px 0px 15px 0px;">
+              <div class="col-12">
+                <label class="input-group-addon">Imagem da Descrição <h11>*</h11></label>
+                <div class="input-group">
+                  <input id="descricao" name="descricao" class="form-control"
+                  type="file" required >
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+          <div class="col-6"  style="padding: 0px;">
+            <div class="form-group row" style="padding: 30px 0px 15px 0px;">
+              <div class="col-12">
+                <label class="input-group-addon">Imagem do Resumo <h11>*</h11></label>
+                <div class="input-group">
+                  <input id="resumo" name="resumo" class="form-control"
+                  type="file" required >
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+          
+          </div>
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1690847bfd4be4e892c0b0d64cc0c22bec3e7856
         <hr class="my-4">
         <div class="arquivo row" style="padding: 0px;">
 
@@ -87,10 +164,11 @@
                 </div>
               </div>
 
-
-
             </div>
+
           </div>
+
+
 
           <div class="col-1 " style="padding: 40px 0px;">
             <div class="form-group col-12 add_del_btn_outer  ">

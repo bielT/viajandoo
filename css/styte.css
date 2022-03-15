@@ -1,8 +1,11 @@
 /* Gerais */
+html{
+scroll-behavior:  smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
   }
-  
+
   .row {
     margin: 0;
     padding: 0;
@@ -11,46 +14,46 @@ body {
   .container {
     padding: 70px 0;
   }
- 
+
   p, li {
     color: #444;
     font-size: 14px;
   }
-  
+
   /* Barra de navegação */
   header, .navbar {
     background-color: #380B61;
   }
-  
+
   #nav-container {
     padding-top: 0;
     padding-bottom: 0;
   }
-  
+
   #logo {
-    width: 238px;   
+    width: 238px;
  }
  .navbar-brand {
     padding: 0;
     color: #FFF;
   }
-  
+
   .navbar-brand:hover {
     color: #FFF;
   }
-  
+
   #navbar-links a {
     color: #FFF;
   }
-  
+
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
-  }   
-  
+  }
+
  .nav-item.active {
     border-bottom: 3px solid #FFF;
   }
-  
+
 
  /* Slider */
 
@@ -108,17 +111,17 @@ body {
     font-size: 40px;
     text-align: center;
   }
-  
+
   .main-title::after {
     content: "";
     border-bottom: 2px solid #333;
     width: 15%;
     position: absolute;
     top: 60px;
-    left: 42.5%; 
+    left: 42.5%;
   }
 
-    
+
 .card-body {
   text-align: center;
 }
@@ -138,12 +141,12 @@ body {
 #about-list {
   list-style: none;
   padding-left: 0;
-  
+
 }
 
 #about-list li {
   line-height: 30px;
-  
+
 }
 
 /*Dados*/
@@ -250,5 +253,5 @@ body {
 
 #botao_venda:hover{
   color: #9211e7;
-  
+
 }

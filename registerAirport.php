@@ -1,7 +1,7 @@
 <?php
 
-$title='Cadastrar Aerporto';
-$links='
+$title='Cadastrar Aeroporto';
+$links=' 
 <link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">
 ';

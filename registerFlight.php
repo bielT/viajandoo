@@ -1,6 +1,6 @@
 <?php
 
-$title='Cadastrar Voo';
+$title='Cadastrar Vôo';
 $links='<link rel="stylesheet" type="text/css" href="css/picker.css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
 <link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">
