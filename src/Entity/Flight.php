@@ -60,7 +60,7 @@ class Flight{
   }
 
   public function delete(){
-    return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->id);
+    return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->idflight);
 
   }
 
@@ -73,7 +73,14 @@ class Flight{
     return (new Database(self::tableName))->select(self::columnNameId.' = '.$id)
     ->fetchObject(__CLASS__);
   }
-
+  public static function getFlightsByAirport($id){
+    return (new Database(self::tableName))->select(self::columnsName[1].' = '.$id )
+    ->fetchAll(PDO::FETCH_CLASS);
+  }
+  public static function getHourByAirport($id){
+    return (new Database(self::tableName))->select(self::columnsName[0].' = '.$id,null,null,'idFlight ,check_out_date_hour')
+    ->fetchAll(PDO::FETCH_CLASS);
+  }
 }
 
 ?>

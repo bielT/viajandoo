@@ -10,7 +10,7 @@ class AirportPageContent{
   const tableName='airport_page_content';
   const columnNameId='idairport_page_content';
   const columnsName = [ 'resume' , 'description' , 'price' ,
- 'path_image_description' , 'id_page' ,'path_miniature'  ];
+ 'path_image_description' ,'path_miniature'   , 'id_page'];
   /*
 airport_page_content
 idairport_page_content int PK
@@ -21,8 +21,8 @@ path_image_description varchar(100)
 id_page int
 path_miniature
   */
-  public function __construct($resumeC=null, $descriptionC=null, $priceC=null,$idPageC=null,
-  $pathImageDescriptionC=null,$pathMiniatureC= null,$id=null)
+  public function __construct($resumeC=null, $descriptionC=null, $priceC=null,
+  $pathImageDescriptionC=null,$pathMiniatureC= null,$idPageC=null,$id=null)
   {
     $db = new Database(self::tableName);
     $this->id = $id;
@@ -47,16 +47,26 @@ path_miniature
     $this->id = $id;
   }
 
+  /*
+  airport_page_content
+  idairport_page_content int PK
+  resume mediumtext
+  description longtext
+  price varchar(40)
+  path_image_description varchar(100)
+  id_page int
+  path_miniature
+  */
   public function register(){
     $this->id = (new Database(self::tableName))->insert([
       self::columnsName[0]  => $this->resumeC,
       self::columnsName[1]  => $this->descriptionC,
       self::columnsName[2]  => $this->priceC,
-      self::columnsName[3]  => $this->idPageC,
-      self::columnsName[4]  => $this->pathImageDescriptionC,
-      self::columnsName[5]  => $this->pathMiniatureC
+      self::columnsName[3]  => $this->pathImageDescriptionC,
+      self::columnsName[4]  => $this->pathMiniatureC,
+      self::columnsName[5]  => $this->idPageC
     ]);
-    return true;
+    return $this->id;
   }
 
   public function update(){
@@ -64,9 +74,9 @@ path_miniature
       self::columnsName[0]  => $this->resumeC,
       self::columnsName[1]  => $this->descriptionC,
       self::columnsName[2]  => $this->priceC,
-      self::columnsName[3]  => $this->idPageC,
-      self::columnsName[4]  => $this->pathImageDescriptionC,
-      self::columnsName[5]  => $this->pathMiniatureC
+      self::columnsName[3]  => $this->pathImageDescriptionC,
+      self::columnsName[4]  => $this->pathMiniatureC,
+      self::columnsName[5]  => $this->idPageC
     ]);
   }
 
@@ -82,6 +92,10 @@ path_miniature
 
   public static function getPage($id){
     return (new Database(self::tableName))->select(self::columnNameId.' = '.$id)
+    ->fetchObject(__CLASS__);
+  }
+  public static function getPageByAirport($id){
+    return (new Database(self::tableName))->select(self::columnsName[5].' = '.$id)
     ->fetchObject(__CLASS__);
   }
 

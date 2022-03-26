@@ -6,13 +6,13 @@
     <div class="jumbotron">
       <h1>Aeroporto</h1>
     </div>
-    <!-- <?=$mensagem?> -->
+     <?=$render["mensagem"]?>
 
-    <!-- <section>
-      <a href="cadastrar.php">
-        <button class="btn btn-success">Nova vaga</button>
+    <section>
+      <a href="registerAirport.php">
+        <button class="btn btn-success">Nova Page</button>
       </a>
-    </section> -->
+    </section>
 
     <section>
 
@@ -24,10 +24,12 @@
             <th>Cidade</th>
             <th>Estado</th>
             <th>País</th>
+            <th>Ação</th>
+
           </tr>
         </thead>
         <tbody>
-          <!-- <?=$resultados?> -->
+           <?=$render["resultados"]?>
         </tbody>
       </table>
 

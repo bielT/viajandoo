@@ -15,10 +15,10 @@ class Airport{
   private $nameC;
   private $cityC;
   private $stateC;
-  private $country;
+  private $countryC;
 
   public function __construct($nameC=null, $cityC=null, $stateC=null,
- $countryC=null,$id=null)
+  $countryC=null,$id=null)
   {
     $db = new Database(self::tableName);
     $this->id = $id;
@@ -41,7 +41,7 @@ class Airport{
       self::columnsName[2]  => $this->stateC,
       self::columnsName[3]  => $this->countryC
     ]);
-    return true;
+    return $this->id;
   }
 
   public function update(){
@@ -53,11 +53,32 @@ class Airport{
     ]);
   }
 
-  public function delete(){
-    return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->id);
+  public  function delete(){
+
+    self::deletePathAirport($this->idairport);
+    return (new Database(self::tableName))->delete(self::columnNameId.'= '.$this->idairport);
 
   }
+  public static function deletePathAirport($id){
+    $a =self::getPathAirport($id);
 
+    foreach ($a as  $value) {
+
+      if (file_exists($value->path_image_description)){
+              unlink($value->path_image_description);
+      }
+      if (file_exists($value->path_miniature)){
+          unlink($value->path_miniature);
+      }
+      if (file_exists($value->path)){
+          unlink($value->path);
+      }
+    }
+  }
+  public static function getPathAirport($id){
+    return (new Database("path_by_id_view"))->select('id_page = '.$id)
+    ->fetchAll(PDO::FETCH_CLASS);
+  }
   public static function getAirports($where = null, $order = null, $limit = null){
     return (new Database(self::tableName))->select($where,$order,$limit)
     ->fetchAll(PDO::FETCH_CLASS);

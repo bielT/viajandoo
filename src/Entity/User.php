@@ -14,7 +14,7 @@ class User{
   private const columnsName = [ 'name' , 'email' , 'telefone' , 'cpf','profile','password'];
   /*
   */
-  public function __construct($nameC=null, $emailC=null, $telefoneC=null, $cpfC=null,$passwordC=null,$id=null)
+  public function __construct($nameC=null, $emailC=null, $telefoneC=null, $cpfC=null,$passwordC=null,$id=null,$profileC =1)
   {
     $db = new Database('user');
     $this->id = $id;
@@ -23,6 +23,7 @@ class User{
     $this->telefoneC = $telefoneC;
     $this->cpfC = $cpfC;
     $this->passwordC = $passwordC;
+    $this->profileC = $profileC;
   }
   private $db;
   private $id;
@@ -30,7 +31,7 @@ class User{
   private $emailC;
   private $telefoneC;
   private $cpfC;
-  private $profileC=1;
+  private $profileC;
   private $passwordC;
   public function setId($id)
   {
@@ -46,7 +47,7 @@ class User{
       self::columnsName[4]  =>  $this->profileC,
       self::columnsName[5]  => $this->passwordC
     ]);
-    return true;
+    return $this->id;
   }
 
   public function update(){
@@ -73,6 +74,11 @@ class User{
 
   public static function getUser($id){
     return (new Database(self::tableName))->select(self::columnNameId.' = '.$id)
+    ->fetchObject(__CLASS__);
+  }
+
+  public static function getUserByEmail($Email){
+    return (new Database(self::tableName))->select(self::columnsName[1].' = '.'"'.$Email.'"')
     ->fetchObject(__CLASS__);
   }
 

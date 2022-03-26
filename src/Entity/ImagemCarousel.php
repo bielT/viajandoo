@@ -53,7 +53,10 @@ id_page int
   }
 
   public function delete(){
-    return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->id);
+    if (file_exists($this->path)){
+            unlink($this->path);
+    }
+    return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->idimagem);
 
   }
 
@@ -65,6 +68,16 @@ id_page int
   public static function getImagemCarousel($id){
     return (new Database(self::tableName))->select(self::columnNameId.' = '.$id)
     ->fetchObject(__class__);
+  }
+  public static function getImagemCarouselByPage($id){
+    return (new Database(self::tableName))->select(self::columnsName[1] .' = '.$id)
+    ->fetchAll(PDO::FETCH_CLASS);
+  }
+
+  public function getAirportByPage($id){
+
+    return (new Database("get_airport_by_age"))->select(self::columnsName[1] .' = '.$this->id_page)
+      ->fetchObject(__class__);
   }
 
 }

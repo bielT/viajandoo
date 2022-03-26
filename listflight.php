@@ -1,14 +1,15 @@
 <?php
+require __DIR__.'/vendor/autoload.php';
+use src\session\Login;
+use src\controller\util\Render;
 
-$title='Listagem de Vôo';
-$links='
-<link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
-<link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">
-';
+
+Login::requireLoginAdmin();
+
+$render= Render::listFlight();
+
 
 include __DIR__.'/include/head.php';
-
-
 include __DIR__.'/include/toolbarAdm.php';
 include __DIR__.'/include/listagemFlight.php';
 

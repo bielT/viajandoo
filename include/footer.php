@@ -43,7 +43,7 @@
   </div>
 </footer>
 
-<?=$script!=null?$script:' '?>
+<?=$render["script"]!=null?$render["script"]:' '?>
 </body>
 
 </html>

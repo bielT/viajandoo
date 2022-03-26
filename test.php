@@ -9,9 +9,13 @@ use  src\Entity\Flight;
 use  src\Entity\Ticket;
 use  src\Entity\AirportPageContent;
 use  src\Entity\ImagemCarousel;
- $us = new User('gabreil Te','asdf@gmail.com','12341234','123456789','1234',8);
+use  src\controller\util\Render;
 
-// $us->delete();
+
+// Address::deleteUser(41);
+ // $us = new User('gabreil Te','asdf@gmail.com','12341234','123456789','1234',8);
+// print_r(User::getUsers("email='asdf@gmail.com'"));
+ // $us->register();
 // $ad = new Address('asdf fjhçkjh ',
                   // 'gagk',
                   // 'state',
@@ -21,8 +25,9 @@ use  src\Entity\ImagemCarousel;
                   // 8,
                   // 10);
 
-// $ai = new Airport('asdf','dadasfeeee','state','pais U',6);
-// //print_r($ai->update());
+// $ai = new Airport('asdf','dadasfeeee','state','pais U',9);
+$ai = Flight::getHourByAirport(44);
+print_r($ai);
 
 
 // $fl = new Flight(1,3,'12/12/2000 de 6:59','12/12/2000 de 20:59',10);
@@ -38,6 +43,6 @@ use  src\Entity\ImagemCarousel;
 //                               'asdfa/asdf/sdf/asdf/asdfsd.png',1,
 // 'asdfa/asdf/sdf/asdf/asdfsd.png',4);
 
-$ic = new ImagemCarousel('asdfa/asdf/sdf/asdf/asdfsd.png',1,2);
-print_r(ImagemCarousel::getImagemCarousels());
+// $ic = new ImagemCarousel('asdfa/asdf/sdf/asdf/asdfsd.png',1,2);
+// print_r(ImagemCarousel::getImagemCarousels());
 ?>

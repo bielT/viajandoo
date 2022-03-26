@@ -41,6 +41,7 @@ class Address{
     $this->id = $id;
   }
 
+
   public function register(){
     $this->id = (new Database(self::tableName))->insert([
       self::columnsName[0]  => $this->addressC,
@@ -70,6 +71,9 @@ class Address{
     return (new Database(self::tableName))->delete(self::columnNameId.'='.$this->id);
 
   }
+  public static function deleteUser($idUserC){
+    return (new Database(self::tableName))->delete(self::columnsName[6].'='.$idUserC);
+  }
 
   public static function getAddresses($where = null, $order = null, $limit = null){
     return (new Database(self::tableName))->select($where,$order,$limit)
@@ -79,6 +83,10 @@ class Address{
   public static function getAddress($id){
     return (new Database(self::tableName))->select(self::columnNameId.' = '.$id)
     ->fetchObject(__CLASS__);
+  }
+  public static function getAddressByUser($id){
+    return (new Database(self::tableName))->select(self::columnsName[6].' = '.'"'.$id.'"')
+    ->fetchAll(PDO::FETCH_CLASS);
   }
 
 }

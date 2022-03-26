@@ -6,13 +6,13 @@
     <div class="jumbotron">
       <h1>Vôo</h1>
     </div>
-    <!-- <?=$mensagem?> -->
+    <?=$render["mensagem"]?>
 
-    <!-- <section>
-      <a href="cadastrar.php">
-        <button class="btn btn-success">Nova vaga</button>
+     <section>
+      <a href="registerFlight.php">
+        <button class="btn btn-success">Novo vôo</button>
       </a>
-    </section> -->
+    </section>
 
     <section>
 
@@ -25,10 +25,11 @@
             <th>ID do Aeroporto de Chegada </th>
             <th>Data e Hora de Saída</th>
             <th>Data e Hora de Chegada</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody>
-          <!-- <?=$resultados?> -->
+          <?=$render["resultados"]?>
         </tbody>
       </table>
 

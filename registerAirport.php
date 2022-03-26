@@ -1,14 +1,16 @@
 <?php
+require __DIR__.'/vendor/autoload.php';
+use src\session\Login;
+use src\controller\util\Render;
 
-$title='Cadastrar Aeroporto';
-$links=' 
-<link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
-<link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">
-';
+
+Login::requireLoginAdmin();
+
+$render= Render::registerAirport();
+
 
 include __DIR__.'/include/head.php';
 include __DIR__.'/include/toolbarAdm.php';
 include __DIR__.'/include/formAirport.php';
-$script = '';
 include __DIR__.'/include/footer.php';
 ?>
