@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title><?=$title!=null?$title:' '?></title>
+    <title><?=$render["title"] !=null? $render["title"] :' '?></title>
 
 
 
@@ -31,7 +31,7 @@
     <!-- Parallax -->
     <script src="js/parallax.min.js"></script>
 
-    <?=$links!=null?$links:' ' ?>
+    <?=$render["links"]!=null ? $render["links"]:' ' ?>
 
 
 

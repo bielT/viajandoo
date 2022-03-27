@@ -1,8 +1,11 @@
 /* Gerais */
+html{
+scroll-behavior:  smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
   }
-  
+
   .row {
     margin: 0;
     padding: 0;
@@ -11,46 +14,46 @@ body {
   .container {
     padding: 70px 0;
   }
- 
+
   p, li {
     color: #444;
     font-size: 14px;
   }
-  
+
   /* Barra de navegação */
   header, .navbar {
     background-color: #380B61;
   }
-  
+
   #nav-container {
     padding-top: 0;
     padding-bottom: 0;
   }
-  
+
   #logo {
-    width: 238px;   
+    width: 238px;
  }
  .navbar-brand {
     padding: 0;
     color: #FFF;
   }
-  
+
   .navbar-brand:hover {
     color: #FFF;
   }
-  
+
   #navbar-links a {
     color: #FFF;
   }
-  
+
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
-  }   
-  
+  }
+
  .nav-item.active {
     border-bottom: 3px solid #FFF;
   }
-  
+
 
  /* Slider */
 
@@ -67,15 +70,14 @@ body {
 }
 
 #mainSlider .carousel-caption h2 {
-  font-size: 10vh;
-  margin-bottom: 3vh;
+  font-size: 8vw;
   text-shadow: 1px 1px 2px black;
 }
 
 #mainSlider .carousel-caption p {
-  font-size: 22px;
+  font-size: 1.5vw;
   font-weight: 300;
-  margin-bottom: 100px;
+  margin-bottom:  1.5vw;
   color: #FFF;
 }
 
@@ -108,17 +110,17 @@ body {
     font-size: 40px;
     text-align: center;
   }
-  
+
   .main-title::after {
     content: "";
     border-bottom: 2px solid #333;
     width: 15%;
     position: absolute;
     top: 60px;
-    left: 42.5%; 
+    left: 42.5%;
   }
 
-    
+
 .card-body {
   text-align: center;
 }
@@ -138,12 +140,12 @@ body {
 #about-list {
   list-style: none;
   padding-left: 0;
-  
+
 }
 
 #about-list li {
   line-height: 30px;
-  
+
 }
 
 /*Dados*/
@@ -250,5 +252,40 @@ body {
 
 #botao_venda:hover{
   color: #9211e7;
-  
+
+}
+#im-card {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+.card-carousel {
+  padding:0px;
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;}
+.card-title{
+  font-size:2.2vw;
+}
+.card-text{
+  font-size:1.4vw;
+}
+
+.co-pg{
+  padding:30px 0px ;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.co-pg img{
+  padding:0px ;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.vd-pg{
+  margin: 30px 0px ;
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
 }

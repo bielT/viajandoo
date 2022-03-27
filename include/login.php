@@ -1,3 +1,7 @@
+<?php
+    $alertLogin   = strlen($alertLogin) ? '<div class="alert alert-danger" role="alert">'.$alertLogin.' </div>' : "";
+ ?>
+
 <main>
   <section class="vh-100" >
     <div class="container py-5 h-100">
@@ -6,9 +10,12 @@
           <div class="card shadow-2-strong" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
 
-              <form method="post" name="form_login" action="1234.php">
+              <form method="POST" name="form_login">
                 <h3 class="mb-5">Sign in</h3>
                 <hr class="my-4">
+
+                  <?=$alertLogin?>
+
                 <div class="form-outline mb-4">
                   <input type="email" id="formEmail" name="formEmail"class="form-control form-control-lg" required/>
                   <label class="form-label" for="typeEmailX-2">Email</label>

@@ -2,13 +2,14 @@
 <main>
 
   <div id="form1">
-    <form class="form-horizontal col-12">
+    <!-- -->
+    <form enctype="multipart/form-data" class="form-horizontal col-12" id="form_airport" method="POST" action="\viajandoo\src\controller\pages\airports.php" >
 
       <div class="panel panel-primary">
         <div class="panel-body">
           <div class="form-group">
             <div class="col-12 control-label" style="padding: 15px 0px 0px 0px;">
-              <h1><?=$title ?></h1>
+              <h1><?=$render["title"] ?></h1>
             </div>
           </div>
 
@@ -19,14 +20,12 @@
         </div>
         <hr class="my-4">
 
-
         <div class="dados-pessoas">
-          <!-- Text input-->
 
           <div class="form-group col-12" style="padding: 0px">
             <label class="col-12 control-label" for="Nome">Nome <h11>*</h11></label>
             <div class="col-12">
-              <input id="Nome" name="Nome" placeholder="" class="form-control input-md"
+              <input id="Nome" name="Nome" placeholder="" value="<?=$render['nome'] ?>" class="form-control input-md"
               required="" type="text">
             </div>
           </div>
@@ -38,7 +37,7 @@
 
                 <label class="input-group-addon">Cidade <h11>*</h11></label>
                 <div class="input-group">
-                  <input id="cidade" name="cidade" class="form-control" type="text"  required >
+                  <input id="cidade" name="cidade" value="<?=$render['cidade'] ?>" class="form-control" type="text"  required >
                 </div>
 
               </div>
@@ -48,7 +47,7 @@
               <div class="form-group">
                 <label class="input-group-addon">Estado <h11>*</h11></label>
                 <div class="input-group">
-                  <input id="estado" name="estado" class="form-control"
+                  <input id="estado" name="estado"  value="<?=$render['estado'] ?>" class="form-control"
                   type="text" required   >
                 </div>
 
@@ -59,8 +58,8 @@
               <div class="form-group">
                 <label class="input-group-addon">País <h11>*</h11></label>
                 <div class="input-group">
-                  <input id="estado" name="estado" class="form-control"
-                  type="text" required   >
+                  <input id="pais" name="pais"  value="<?=$render['pais']?>" class="form-control"
+                  type="text" required>
                 </div>
 
               </div>
@@ -68,118 +67,99 @@
 
           </div>
 
-          
+
 
 
         </div>
         <div class="form-group row" style="padding: 30px 0px 0px 0px;">
 
-<div class="col-4">
-  <div class="form-group ">
+          <div class="col-4">
+            <div class="form-group ">
 
-    <label class="input-group-addon">Resumo <h11>*</h11></label>
-    <div class="input-group">
-    <textarea class="form-control" rows="3" placeholder="Seu Resumo" name="resumo"></textarea>
-    </div>
-
-  </div>
-</div>
-
-<div class="col-4">
-  <div class="form-group">
-    <label class="input-group-addon">Descrição <h11>*</h11></label>
-    <div class="input-group">
-    <textarea class="form-control" rows="3" placeholder="Sua Descrição" name="descricao"></textarea>
-
-    </div>
-
-  </div>
-</div>
-
-<div class="col-4">
-  <div class="form-group">
-    <label class="input-group-addon">Preço <h11>*</h11></label>
-    <div class="input-group">
-      <input id="preco" name="preco" class="form-control"
-      type="text" required   >
-    </div>
-
-  </div>
-</div>
-
-</div>
-
-
-
-
-</div>
-<hr class="my-4">
-        <div class="arquivo row" style="padding: 0px;">
-
-          <div class="col-6"  style="padding: 0px;">
-            <div class="form-group row" style="padding: 30px 0px 15px 0px;">
-              <div class="col-12">
-                <label class="input-group-addon">Imagem da Descrição <h11>*</h11></label>
-                <div class="input-group">
-                  <input id="descricao" name="descricao" class="form-control"
-                  type="file" required >
-                </div>
-              </div>
-              
-            </div>
-
-          </div>
-          <div class="col-6"  style="padding: 0px;">
-            <div class="form-group row" style="padding: 30px 0px 15px 0px;">
-              <div class="col-12">
-                <label class="input-group-addon">Imagem do Resumo <h11>*</h11></label>
-                <div class="input-group">
-                  <input id="resumo" name="resumo" class="form-control"
-                  type="file" required >
-                </div>
-              </div>
-              
-            </div>
-
-          </div>
-          
-          </div>
-
-        <hr class="my-4">
-        <div class="arquivo row" style="padding: 0px;">
-
-          <div class="col-11"  style="padding: 0px;">
-            <div class="form-group row" style="padding: 30px 0px 15px 0px;">
-              <div class="col-6">
-                <label class="input-group-addon">Arquivo <h11>*</h11></label>
-                <div class="input-group">
-                  <input id="endereco" name="endereco" class="form-control"
-                  type="file" required >
-                </div>
+              <label class="input-group-addon">Resumo <h11>*</h11></label>
+              <div class="input-group">
+                <textarea class="form-control" rows="3"  placeholder="Seu Resumo" name="resumo"><?=$render['resumo']?></textarea>
               </div>
 
             </div>
-
           </div>
 
+          <div class="col-4">
+            <div class="form-group">
+              <label class="input-group-addon">Descrição <h11>*</h11></label>
+              <div class="input-group">
+                <textarea class="form-control" rows="3"  placeholder="Sua Descrição" name="descricao"><?=$render['descricao'] ?></textarea>
 
+              </div>
 
-          <div class="col-1 " style="padding: 40px 0px;">
-            <div class="form-group col-12 add_del_btn_outer  ">
-              <button class="btn_round add_node_btn_frm_field"  style="margin-bottom: 10px;" title="Copy or clone this row">
-                <i class="fas fa-copy"></i>
-              </button>
-
-              <button class="btn_round remove_node_btn_frm_field" disabled="">
-                <i class="fas fa-trash-alt"></i>
-              </button>
             </div>
           </div>
+
+          <div class="col-4">
+            <div class="form-group">
+              <label class="input-group-addon">Preço <h11>*</h11></label>
+              <div class="input-group">
+                <input id="preco" name="preco" value="<?=$render['preco']?>" class="form-control"
+                type="number" required   >
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
 
 
 
+      </div>
+
+      <hr class="my-4">
+
+      <div class="arquivo row" style="padding: 0px;">
+
+        <div class="col-6"  style="padding: 0px;">
+          <div class="form-group row" style="padding: 30px 0px 15px 0px;">
+            <div class="col-12">
+              <label class="input-group-addon">Imagem da Descrição <h11>*</h11></label>
+              <div class="input-group">
+                <input id="imagemdescricao"  name="imagemdescricao" class="form-control"
+                type="file" <?=$render['required']?>><?=$render['imagemdescricao']?>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-6"  style="padding: 0px;">
+          <div class="form-group row" style="padding: 30px 0px 15px 0px;">
+            <div class="col-12">
+              <label class="input-group-addon">Imagem de Miniatura <h11>*</h11></label>
+              <div class="input-group">
+                <input id="imagemminiatura"  name="imagemminiatura" class="form-control"
+                type="file"  <?=$render['required']?>><?=$render['imagemminiatura']?>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <hr class="my-4">
+      <div class="form_field_outer row" style="padding:  30px 0px;">
+        <div class="col-6">
+          <label class="input-group-addon">Arquivo Carrosel <h11>*</h11></label>
+          <div class="input-group">
+            <input multiple id="imagemcarrocel_1"  name="imagemcarrocel[]" class="form-control"
+            type="file" <?=$render['required']?> >
+          </div>
+        </div>
+        <div class="col-6">
+          <?=$render['table'] ?>
+        </div>
 
         <hr class="my-4">
       </div>
@@ -192,15 +172,19 @@
       <div class="row">
         <div class="col-6">
           <div class="form-group ">
-            <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+            <a href="listAirport.php ">
+              <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="button">Cancelar</button>
+            </a>
           </div>
         </div>
         <div class="col-6">
           <div class="form-group float-right ">
-            <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+            <button  name="submit" id="submit" class="btn btn-success"
+            type="Submit" value="<?=$render['type']?>">Cadastrar</button>
           </div>
         </div>
       </div>
+
     </form>
   </div>
 

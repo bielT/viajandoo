@@ -1,14 +1,21 @@
 <?php
+require __DIR__.'/vendor/autoload.php';
+use src\session\Login;
 
-$title='Atualizar Aeroporto';
-$links='
-<link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
-<link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">
-';
+use src\controller\util\Render;
 
-include __DIR__.'/include/head.php';
+
+Login::requireLoginAdmin();
+
+if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
+  header("location: index.php?status=error");
+  exit;
+}
+ $render= Render::updateAirport(filter_input(INPUT_GET, 'id',
+                               FILTER_SANITIZE_ENCODED));
+
+include __DIR__.'/include/head.php';  ///Script e bootstrap
 include __DIR__.'/include/toolbarAdm.php';
-include __DIR__.'/include/formAirport.php';
-$script = '';
+include __DIR__.'/include/formAirport.php'; ///Front
 include __DIR__.'/include/footer.php';
 ?>
