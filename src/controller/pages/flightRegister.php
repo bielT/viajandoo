@@ -22,7 +22,7 @@ if ( ! empty( $_POST ) ) {
     $dados['datepickerout'].','.$dados['hourout']
   );
   $flight->register();
-  echo "Cadratrado com SUCESSO";
+  echo "Cadastrado com SUCESSO";
 } catch (\Exception $e) {
   echo "Erro de conexão BD";
 }
@@ -31,7 +31,7 @@ if ( ! empty( $_POST ) ) {
 
 
 }else {
-  echo "Operação invalidade";
+  echo "Operação inválida";
 
 }
 

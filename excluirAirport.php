@@ -19,9 +19,9 @@ if(isset($_POST['excluir'])){
   header('location: listAirport.php?status=success');
   exit;
 }
-include __DIR__.'/include/head.php';
-include __DIR__.'/include/toolbarAdm.php';
-include __DIR__.'/include/confirmar_exclusao.php';
+include __DIR__.'/include/head.php'; ///Script e bootstrap
+include __DIR__.'/include/toolbarAdm.php'; /// Menu Viajando dropdown, sanduiche
+include __DIR__.'/include/confirmar_exclusao.php'; ///Front
 
 
 

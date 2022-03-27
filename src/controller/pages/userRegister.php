@@ -46,7 +46,7 @@ if ( ! empty( $_POST ) ) {
       $dados['cpf'],
       $senha);
       registerAddresses($user1->register(),$dados);
-      echo "Cadratrado com SUCESSO";
+      echo "Cadastrado com SUCESSO";
     } catch (\Exception $e) {
       echo "Erro de conexão BD";
     }
@@ -57,7 +57,7 @@ if ( ! empty( $_POST ) ) {
     echo "Erro no envio do e-mail.";
   }
 }else {
-  echo "Operação invalidade";
+  echo "Operação inválida";
 
 }
 

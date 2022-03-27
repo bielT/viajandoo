@@ -20,9 +20,6 @@
         </div>
         <hr class="my-4">
 
-
-
-
         <div class="dados-pessoas">
 
           <div class="form-group col-12" style="padding: 0px">

@@ -14,8 +14,8 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
  $render= Render::updateAirport(filter_input(INPUT_GET, 'id',
                                FILTER_SANITIZE_ENCODED));
 
-include __DIR__.'/include/head.php';
+include __DIR__.'/include/head.php';  ///Script e bootstrap
 include __DIR__.'/include/toolbarAdm.php';
-include __DIR__.'/include/formAirport.php';
+include __DIR__.'/include/formAirport.php'; ///Front
 include __DIR__.'/include/footer.php';
 ?>

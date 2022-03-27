@@ -330,6 +330,14 @@ class Render
                           <link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">',
                           "script"  => '<script  src="js/formUser.js"></script>'];
                         }
+                        
+                        public static function buy_ticket(){
+                          return["title"   => 'Comprar Ticket',
+                          "links"   => '<link rel="stylesheet" type="text/css" href="css/formulario.css" media="screen">
+                          <link rel="stylesheet" type="text/css" href="css/cadrastrar.css" media="screen">',
+                          "script"  => '<script  src="js/formUser.js"></script>'];
+                        
+                        }
                         public static function registerAirport(){
                           return  [
                             "nome"   => "",

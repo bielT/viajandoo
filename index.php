@@ -12,7 +12,7 @@ if(Login::requireLoginAdminBool()){
   include __DIR__.'/include/toolbarHomeAdmin.php';
 }
 else{
-  include __DIR__.'/include/toolbarHome.php';
+  include __DIR__.'/include/toolbarHome.php'; /// Menu Viajando dropdown, sanduiche//sobre a agencia
 }
 include __DIR__.'/include/home.php';
 include __DIR__.'/include/footer.php';

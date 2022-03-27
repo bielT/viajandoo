@@ -23,7 +23,7 @@ if ( ! empty( $_POST ) ) {
     $dados['id']
   );
   $flight->update();
-  echo "Cadratrado com SUCESSO";
+  echo "Cadastrado com SUCESSO";
 } catch (\Exception $e) {
   echo "Erro de conexão BD";
 }

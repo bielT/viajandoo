@@ -22,7 +22,7 @@ if($_POST){
 
 
 
-include __DIR__.'/include/head.php';
+include __DIR__.'/include/head.php';  ///Script e bootstrap
 include __DIR__.'/include/toolbarUser.php';
-include __DIR__.'/include/login.php';
+include __DIR__.'/include/login.php'; ///Front
 ?>

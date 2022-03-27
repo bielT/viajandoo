@@ -9,8 +9,8 @@ Login::requireLoginAdmin();
 $render= Render::registerFlight();
 
 
-include __DIR__.'/include/head.php';
-include __DIR__.'/include/toolbarAdm.php';
-include __DIR__.'/include/formFlight.php';
+include __DIR__.'/include/head.php'; ///Script e bootstrap
+include __DIR__.'/include/toolbarAdm.php'; /// Menu Viajando dropdown, sanduiche
+include __DIR__.'/include/formFlight.php'; ///Front
 include __DIR__.'/include/footer.php';
 ?>
